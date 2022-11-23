@@ -1,9 +1,11 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:modularize/modules/login/login_page.dart';
 
 class LoginModule extends Module {
   @override
   List<Bind> get binds => const [];
 
   @override
-  List<ModularRoute> get routes => const [];
+  List<ModularRoute> get routes =>
+      [ChildRoute("/", child: (context, args) => const LoginPage())];
 }

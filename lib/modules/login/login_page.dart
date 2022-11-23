@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
+  final String title;
+  const LoginPage({Key? key, this.title = 'LoginPage'}) : super(key: key);
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  LoginPageState createState() => LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class LoginPageState extends State<LoginPage> {
+  //final LoginStore store = Modular.get();
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: const Center(
+        child: Text('You are in the LoginPage'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Modular.to.navigate('/home');
+        },
+        child: const Icon(Icons.done),
+      ),
+    );
   }
 }
