@@ -31,10 +31,10 @@ class Home1 extends StatelessWidget {
       body: Container(
         child: Center(
           child: ElevatedButton(
-            child: const Text("Navigate"),
+            child: const Text("Navigate A"),
             onPressed: () {
               // navigate between screens
-              Modular.to.pushNamed('/home2');
+              Modular.to.pushNamed('/home2/sara', arguments: {'name': 'Joe'});
             },
           ),
         ),
@@ -43,9 +43,15 @@ class Home1 extends StatelessWidget {
   }
 }
 
-class Home2 extends StatelessWidget {
-  const Home2({Key? key}) : super(key: key);
+class Home2 extends StatefulWidget {
+  const Home2({Key? key, this.name}) : super(key: key);
+  final String? name;
 
+  @override
+  State<Home2> createState() => _Home2State();
+}
+
+class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +59,16 @@ class Home2 extends StatelessWidget {
         title: const Text("Home 2"),
       ),
       body: Container(
-        child: const Center(child: Text("Home 2")),
+        child: Center(
+            child: Column(
+          children: [
+            const Text("Home 2"),
+            const SizedBox(
+              height: 10,
+            ),
+            Text("ARGS ${widget.name}")
+          ],
+        )),
       ),
     );
   }

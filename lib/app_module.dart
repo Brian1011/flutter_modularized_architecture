@@ -6,6 +6,9 @@ class AppModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute(Modular.initialRoute,
             child: (context, args) => const Home1()),
-        ChildRoute('/home2', child: (context, args) => const Home2())
+        ChildRoute('/home2/:name',
+            child: (context, args) => Home2(
+                  name: args.queryParams['name'],
+                ))
       ];
 }
