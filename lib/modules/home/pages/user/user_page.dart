@@ -8,7 +8,7 @@ class UserPage extends StatefulWidget {
   final String? age;
   final String? comment;
   final UserModel? userModel;
-  UserPage({Key? key, this.name, this.userModel, this.age, this.comment})
+  UserPage({Key? key, this.name, this.age, this.comment, this.userModel})
       : super(key: key);
 
   @override
@@ -27,9 +27,8 @@ class _UserPageState extends State<UserPage> {
           child: Column(
             children: [
               Text('Comment - ${widget.comment}'),
+              Text('User is - ${widget.userModel?.name}'),
               Text('UserPage - parameter ${widget.name} ${widget.age}'),
-              Text(
-                  'UserPage - object ${widget.userModel?.id} - ${widget.userModel?.name}'),
               const SizedBox(
                 height: 5,
               ),

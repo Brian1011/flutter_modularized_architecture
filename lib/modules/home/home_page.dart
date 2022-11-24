@@ -35,13 +35,11 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Modular.to.pushNamed(
-            '/home/user/Kuringa/3333/12/home',
-            arguments: UserModel(id: 1, name: 'Raphael'),
-          );
+          Modular.to.pushNamed('/home/user/Kuringa/3333/12/home',
+              arguments: UserModel(id: 1, name: "Random right"));
           // Modular.to.navigate('/');
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
