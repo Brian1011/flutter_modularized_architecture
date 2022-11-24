@@ -24,7 +24,7 @@ class LoginPageState extends State<LoginPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Modular.to.navigate('/home');
+          Modular.to.pushNamed('/home');
         },
         child: const Icon(Icons.done),
       ),
