@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'login_store.dart';
+
 class LoginPage extends StatefulWidget {
   final String title;
   const LoginPage({Key? key, this.title = 'LoginPage'}) : super(key: key);
@@ -9,7 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class LoginPageState extends State<LoginPage> {
-  //final LoginStore store = Modular.get();
+  final LoginStore store = Modular.get();
 
   @override
   Widget build(BuildContext context) {
