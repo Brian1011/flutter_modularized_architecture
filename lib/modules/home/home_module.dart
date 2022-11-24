@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:how_to/app/modules/home/pages/user/service/user_service.dart';
+import 'package:modularize/modules/home/pages/user/service/user_service.dart';
 
 import '../home/home_store.dart';
 import 'home_page.dart';

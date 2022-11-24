@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:how_to/app/modules/home/model/user_model.dart';
+import 'package:modularize/modules/home/model/user_model.dart';
 
 import 'home_store.dart';
 

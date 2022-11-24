@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:how_to/app/modules/home/model/user_model.dart';
-import 'package:how_to/app/modules/home/pages/user/user_store.dart';
+import 'package:modularize/modules/home/model/user_model.dart';
+import 'package:modularize/modules/home/pages/user/user_store.dart';
 
 class UserPage extends StatefulWidget {
   final String? name;
@@ -26,7 +25,8 @@ class _UserPageState extends State<UserPage> {
           child: Column(
             children: [
               Text('UserPage - parameter ${widget.name} ${widget.age}'),
-              Text('UserPage - object ${widget.userModel?.id} - ${widget.userModel?.name}'),
+              Text(
+                  'UserPage - object ${widget.userModel?.id} - ${widget.userModel?.name}'),
               const SizedBox(
                 height: 5,
               ),
@@ -36,11 +36,11 @@ class _UserPageState extends State<UserPage> {
                   onChanged: store.setName,
                 ),
               ),
-              Observer(
+              /*Observer(
                 builder: (_) {
                   return Text('My name is: ${store.name}');
                 },
-              ),
+              ),*/
               ElevatedButton(
                 onPressed: () async {
                   await store.callTheService();
