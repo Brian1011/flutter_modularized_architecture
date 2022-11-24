@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Modular.to.pushNamed(
-            '/home/user/Kuringa/3333/12',
+            '/home/user/Kuringa/3333/12/home',
             arguments: UserModel(id: 1, name: 'Raphael'),
           );
           // Modular.to.navigate('/');

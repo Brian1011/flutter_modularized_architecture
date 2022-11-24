@@ -26,10 +26,11 @@ class HomeModule extends Module {
     // /home/user/kuringa
     ChildRoute(Modular.initialRoute, child: (_, args) => HomePage()),
     ChildRoute(
-      '/user/:name/:age/:id',
+      '/user/:name/:age/:id/:comment',
       child: (_, args) => UserPage(
         name: args.params['name'],
         age: args.params['id'],
+        comment: args.params['comment'],
         userModel: args.data,
       ),
     ),

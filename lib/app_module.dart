@@ -12,6 +12,6 @@ class AppModule extends Module {
                   name: args.queryParams['name'],
                 )),*/
         ModuleRoute(Modular.initialRoute, module: LoginModule()),
-        ModuleRoute("/home", module: HomeModule())
+        ModuleRoute("/home/", module: HomeModule())
       ];
 }
