@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:modularize/modules/home/home_store.dart';
 import 'package:modularize/modules/home/pages/user/service/user_service.dart';
 
-import '../home/home_store.dart';
 import 'home_page.dart';
 import 'pages/user/user_page.dart';
 import 'pages/user/user_store.dart';

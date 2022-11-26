@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:modularize/modules/home/home_store.dart';
 import 'package:modularize/modules/home/model/user_model.dart';
-
-import 'home_store.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -19,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter'),
+        title: const Text('Counter'),
       ),
       body: Column(
         children: [
@@ -29,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 '/',
               );
             },
-            child: Text('Logout'),
+            child: const Text('Logout'),
           )
         ],
       ),
